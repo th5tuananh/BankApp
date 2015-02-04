@@ -12,5 +12,7 @@ public abstract class Account {
     // they will all add money to the account
     public abstract void addCredit(double money);
 
+    public abstract float CheckBalance();
+
 
 }

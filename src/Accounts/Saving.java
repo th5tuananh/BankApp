@@ -5,8 +5,26 @@ package Accounts;
  */
 public class Saving extends Account{
 
+    private float AccountBalance;
+
     public void addCredit(double money){
 
     }
 
+
+    public float CheckBalance() {
+        return getAccountBalance();
+    }
+
+
+
+
+//    Setter and Getters
+    public float getAccountBalance() {
+        return AccountBalance;
+    }
+
+    public void setAccountBalance(float accountBalance) {
+        AccountBalance = accountBalance;
+    }
 }
