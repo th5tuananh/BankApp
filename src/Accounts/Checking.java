@@ -5,26 +5,11 @@ package Accounts;
  */
 public class Checking extends Account {
 
-    private float AccountBalance;
+    private int numCheques;
 
-    public void addCredit(double money){
-
+    public Checking (int number, double balance, int cheques){
+        super(number , balance);
+        numCheques = cheques;
     }
 
-    public float CheckBalance(){
-        return getAccountBalance();
-    }
-
-
-
-
-
-// Setters and Getters
-    public float getAccountBalance() {
-        return AccountBalance;
-    }
-
-    public void setAccountBalance(float accountBalance) {
-        AccountBalance = accountBalance;
-    }
 }

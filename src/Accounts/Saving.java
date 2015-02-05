@@ -5,26 +5,25 @@ package Accounts;
  */
 public class Saving extends Account{
 
-    private float AccountBalance;
+    private double interestRate;
 
-    public void addCredit(double money){
-
+    public Saving(int number, double balance, double interest){
+        super(number, balance);
+        interestRate = interest;
     }
 
 
-    public float CheckBalance() {
-        return getAccountBalance();
+    public void calculateInterest() {
+        double interest;
+        interest = balance * (interestRate/12.0);
+        deposit(interest);
+
+    }
+    public String toString(){
+        String s;
+        s = super.toString();
+        s = s + " Interest Rate: " + interestRate;
+        return s;
     }
 
-
-
-
-//    Setter and Getters
-    public float getAccountBalance() {
-        return AccountBalance;
-    }
-
-    public void setAccountBalance(float accountBalance) {
-        AccountBalance = accountBalance;
-    }
 }

@@ -3,16 +3,57 @@ package Accounts;
 
 public abstract class Account {
 //    variables to be used
+    private int number;
+    private static int numberGenerator=10;
+    protected double balance;
 
-    public Account(){
-        // constructor
+
+
+    public Account() {
+        number = numberGenerator;
+        numberGenerator = numberGenerator + 10;
     }
 
-    // this is abstract since the different accounts can decide on how
-    // they will all add money to the account
-    public abstract void addCredit(double money);
+    public Account(int number , double balance){
+        this.number = number;
+        this.balance = balance;
+    }
 
-    public abstract float CheckBalance();
+    public void deposit(double amount){
+        balance = balance + amount;
+    }
+
+    public void withdraw(double amount) {
+        if( balance >= amount ) balance = balance - amount;
+
+    }
+
+    public String toString() {
+        String s;
+        s = "Number" + number + "Balance: " + balance;
+        return s;
+    }
+
+//    Setters and Getters
+
+    public void setNumber(int n) {
+        number = n;
+    }
+
+    public int getNumber(){
+        return number;
+    }
+
+    public void setBalance(double amount){
+        balance = amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+
+
 
 
 }
