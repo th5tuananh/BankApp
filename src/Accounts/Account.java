@@ -30,7 +30,7 @@ public abstract class Account {
 
     public String toString() {
         String s;
-        s = "Number" + number + "Balance: " + balance;
+        s = "Number: " + number + "Balance: " + balance;
         return s;
     }
 
