@@ -1,8 +1,5 @@
 package Exception;
 
-/**
- * Created by Mitra on 1/27/2015.
- */
 public class LessThanZero extends Exception {
 
     public LessThanZero (){
