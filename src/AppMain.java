@@ -8,13 +8,16 @@ import java.sql.SQLException;
 public class AppMain {
 
     public static void main(String[] args) throws IOException {
-        DBConnection DB = new DBConnection();
+            Functions DB = new Functions();
         try{
 
 
 
+            // Adding Banks
+            DB.AddNewBank("Republic bank");
+            DB.AddNewBank("Royal Bank");
 
-            DB.AddNewBank("");
+            // Printing out all Banks from the database
             ResultSet rs =  DB.RetrieveFromTableName("bank");
                 System.out.println("list of banks...");
                 while (rs.next()) {
@@ -23,7 +26,11 @@ public class AppMain {
                     System.out.println(BankID + " " + BankName);
                 }
 
-            DB.AddNewClient("Person First name ","Person last name");
+            // adding clients to the batabase
+            DB.AddNewClient("Will","Smith");
+            DB.AddNewClient("Harry","Potter");
+
+            // Printing out all clients
             rs = DB.RetrieveFromTableName("client");
             System.out.println("list of Clients...");
             while (rs.next()) {
@@ -32,6 +39,12 @@ public class AppMain {
                 System.out.println("client name is "+ firstname + " " + lastname);
             }
 
+            // deleting all data from a specific table
+            DB.DeleteTableData("bank");
+            DB.DeleteTableData("client");
+
+            // close connection to database
+            DB.getConn().close();
 
 
         } catch (SQLException e) {
