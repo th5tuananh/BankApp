@@ -35,6 +35,40 @@ public class DBConnection {
     }
 
 
+    //    returing all the data from a SELECT statement
+    public ResultSet RetrieveFromTableName(String tablename) throws SQLException {
+        try{
+            String sql = "SELECT * FROM " + tablename;
+            Statement stmt = conn.createStatement();
+            return stmt.executeQuery(sql);
+        }catch(SQLException se){
+            se.printStackTrace();
+        }
+        return null;
+    }
+
+    //    can be used to run a custom sql update or insert statement
+    public void UpdateOrInsert(String sql) throws SQLException {
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute(sql);
+        }catch (SQLException se){
+            se.printStackTrace();
+        }
+    }
+
+    //    for deleting all data from a specific table
+    public void DeleteTableData(String tablename) throws SQLException {
+        try{
+            String sql = "DELETE  FROM " + tablename;
+            Statement stmt = conn.createStatement();
+            stmt.execute(sql);
+        }catch(SQLException se){
+            se.printStackTrace();
+        }
+    }
+
+
 
     public Connection getConn() {
         return conn;
