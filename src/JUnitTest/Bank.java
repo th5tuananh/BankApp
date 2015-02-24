@@ -7,16 +7,16 @@ import org.junit.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static junit.framework.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
 
 
 public class Bank {
 
-    private static Functions DB;
+    private static DBbank DB;
 
     @BeforeClass
     public static void runOnceBeforeEachTest() throws SQLException {
-        DB = new Functions();
+        DB = new DBbank();
         try{
             // Adding Bank
             DB.DeleteTableData("bank");
