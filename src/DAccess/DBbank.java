@@ -29,22 +29,6 @@ public class DBbank extends DBConnection {
         }
     }
 
-    public String BankName(int ID){
-        String str = "";
-        DBConnection DB = new DBConnection();
-        try {
-            ResultSet rs = DB.RetrieveFromTableName("bank");
-            while (rs.next()) {
-                if (ID == rs.getInt("bankid")){
-                    str = rs.getString("bankname");
-                    return str;
-                }
-            }
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        return str;
-    }
 
 
 }

@@ -6,9 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
 
-/**
- * Created by Mitra on 2/24/2015.
- */
+
 public class DBclient extends DBConnection {
 
     private Connection conn;
@@ -34,40 +32,30 @@ public class DBclient extends DBConnection {
         }
     }
 
-    public int getClientID(String user_name) throws SQLException{
-        DBConnection DB = new DBConnection();
+    public Boolean IsAvailable(String username, String password){
+        int hash = password.hashCode();
         try {
+            DBConnection DB = new DBConnection();
             ResultSet rs = DB.RetrieveFromTableName("client");
             while (rs.next()) {
                 String UserName = rs.getString("username");
-                int ID = rs.getInt("clientid");
+                int HashPassword = rs.getInt("password");
 
-                if(UserName.contentEquals(user_name)){
-                    return ID;
+                if(UserName.contentEquals(username) && (HashPassword == hash) ){
+                    return true;
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return -1;
+        return false;
     }
 
-    public void ClientBanks(String client_name) throws SQLException{
+
+    public ResultSet ClientBanks(String client_name) throws SQLException{
         DBConnection DB = new DBConnection();
-        DBbank DBb = new DBbank();
-        int ID = getClientID(client_name);
-        try {
-            ResultSet rs = DB.RetrieveFromTableName("bankclient");
-            while (rs.next()) {
-                if (ID == rs.getInt("clientid")){
-                    System.out.println(DBb.BankName(rs.getInt("bankid")));
-                }
-            }
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-
-
+        String sql = "select bankname from `bank` where bankid in (SELECT DISTINCT bankid from `bankclient`,`client` where bankclient.clientid = (SELECT clientid from client where client.username  = '"+client_name+"') )";
+        return  DB.SelectStatement(sql);
     }
 
 

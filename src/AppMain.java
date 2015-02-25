@@ -1,5 +1,4 @@
 import DAccess.*;
-import Login.*;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -10,16 +9,16 @@ public class AppMain {
 
 
     public static void main(String[] args) throws IOException {
-        DBbank DB = new DBbank();
+        DBbank DBb = new DBbank();
         DBclient DBc = new DBclient();
 
         try {
             // Adding Banks
-            //DB.AddNewBank("Republic bank");
-            //DB.AddNewBank("Royal Bank");
+            DBb.AddNewBank("Republic bank");
+            DBb.AddNewBank("Royal Bank");
 
             // Printing out all Banks from the database
-            ResultSet rs = DB.RetrieveFromTableName("bank");
+            ResultSet rs = DBb.RetrieveFromTableName("bank");
             System.out.println("list of banks...");
             while (rs.next()) {
                 String BankName = rs.getString("bankname");
@@ -28,14 +27,13 @@ public class AppMain {
             }
 
             // adding clients to the batabase
-            //DBc.AddNewClient("Will", "Smith", "WillSmith", "hi");
-            //DBc.AddNewClient("Harry", "Potter", "HP", "Hola");
+            DBc.AddNewClient("Will", "Smith", "WillSmith", "hi");
+            DBc.AddNewClient("Harry", "Potter", "HP", "Hola");
 
-            UserLogin UL = new UserLogin();
-            System.out.println(UL.IsAvailable("WillSmith", "hi"));
+            System.out.println(DBc.IsAvailable("WillSmith", "hi"));
 
             // Printing out all clients
-            rs = DB.RetrieveFromTableName("client");
+            rs = DBb.RetrieveFromTableName("client");
             System.out.println("list of Clients...");
             while (rs.next()) {
                 String firstname = rs.getString("firstname");
@@ -43,16 +41,20 @@ public class AppMain {
                 System.out.println("client name is " + firstname + " " + lastname);
             }
 
-            String name = "WillSmith";
+
+            String name = "mkalloo";
             System.out.println("\n\n" + name +" banks");
-            DBc.ClientBanks(name);
+            rs = DBc.ClientBanks(name);
+            while(rs.next()){
+                System.out.println(rs.getString("bankname"));
+            }
 
             // deleting all data from a specific table
-            //DB.DeleteTableData("bank");
-            //DB.DeleteTableData("client");
+            DBb.DeleteTableData("bank");
+            DBb.DeleteTableData("client");
 
             // close connection to database
-            DB.getConn().close();
+            DBb.getConn().close();
 
 
         } catch (SQLException e) {

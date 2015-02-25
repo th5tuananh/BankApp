@@ -1,13 +1,8 @@
 package JUnitTest;
 
-
 import DAccess.*;
-import Login.*;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-
 import java.sql.SQLException;
 
 import static junit.framework.Assert.assertFalse;
@@ -15,7 +10,6 @@ import static junit.framework.TestCase.assertTrue;
 
 public class Client {
 
-    private static UserLogin UL;
     private static DBclient DBc;
 
 
@@ -38,10 +32,9 @@ public class Client {
     // testing Logging is true/false
     @Test
     public void testBankName() throws SQLException {
-        UL = new UserLogin();
-        assertTrue(UL.IsAvailable("mkalloo","password123"));
-        assertFalse(UL.IsAvailable("WillSmith","Wills"));
-        assertTrue(UL.IsAvailable("HP","HPot"));
+        assertTrue(DBc.IsAvailable("mkalloo","password123"));
+        assertFalse(DBc.IsAvailable("WillSmith","Wills"));
+        assertTrue(DBc.IsAvailable("HP","HPot"));
         }
 
 
