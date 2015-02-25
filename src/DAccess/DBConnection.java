@@ -40,7 +40,8 @@ public class DBConnection {
         try{
             String sql = "SELECT * FROM " + tablename;
             Statement stmt = conn.createStatement();
-            return stmt.executeQuery(sql);
+            ResultSet rs = stmt.executeQuery(sql);
+            return rs;
         }catch(SQLException se){
             se.printStackTrace();
         }

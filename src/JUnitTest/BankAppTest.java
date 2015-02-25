@@ -9,17 +9,8 @@ import java.util.*;
 
 public class BankAppTest extends TestCase {
 
-//    @Before
-//    public void setUp() throws Exception {
-//
-//    }
-
     private static Result result;
 
-    /**
-     * Main method
-     * Notes: replace "TestProject1" with the name of your test suite class
-     */
     public static void main (String [] args)
     {
 
