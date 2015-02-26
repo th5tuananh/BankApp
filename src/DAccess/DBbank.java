@@ -28,14 +28,14 @@ public class DBbank extends DBConnection {
         }
     }
 
-    public int getBankID(String bank_name){
+    public int getBankID(String bank_name) throws SQLException{
         try {
             DBConnection DB = new DBConnection();
             ResultSet rs = DB.SelectStatement("select bankid from bank where bankname = '"+bank_name+"'");
             if(rs.next()) {
                 return rs.getInt("bankid");
             }
-        }catch (Exception e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return -1;

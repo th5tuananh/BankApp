@@ -1,4 +1,5 @@
 import DAccess.*;
+import jdk.internal.util.xml.impl.ReaderUTF16;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -13,34 +14,7 @@ public class AppMain {
         DBclient DBc = new DBclient();
 
         try {
-            // Adding Banks
-            DBb.AddNewBank("Republic bank");
-            DBb.AddNewBank("Royal Bank");
-
-            // Printing out all Banks from the database
-            ResultSet rs = DBb.RetrieveFromTableName("bank");
-            System.out.println("list of banks...");
-            while (rs.next()) {
-                String BankName = rs.getString("bankname");
-                int BankID = rs.getInt("bankid");
-                System.out.println(BankID + " " + BankName);
-            }
-
-            // adding clients to the batabase
-            DBc.AddNewClient("Will", "Smith", "WillSmith", "hi");
-            DBc.AddNewClient("Harry", "Potter", "HP", "Hola");
-
-            System.out.println(DBc.IsAvailable("WillSmith", "hi"));
-
-            // Printing out all clients
-            rs = DBb.RetrieveFromTableName("client");
-            System.out.println("list of Clients...");
-            while (rs.next()) {
-                String firstname = rs.getString("firstname");
-                String lastname = rs.getString("lastname");
-                System.out.println("client name is " + firstname + " " + lastname);
-            }
-
+            ResultSet rs;
 
             String name = "mkalloo";
             System.out.println("\n\n" + name +" banks");
@@ -50,8 +24,8 @@ public class AppMain {
             }
 
             // deleting all data from a specific table
-            DBb.DeleteTableData("bank");
-            DBb.DeleteTableData("client");
+            //DBb.DeleteTableData("bank");
+            //DBb.DeleteTableData("client");
 
             // close connection to database
             DBb.getConn().close();

@@ -29,24 +29,6 @@ public class DBclient extends DBConnection {
         }
     }
 
-    public Boolean IsAvailable(String username, String password){
-        int hash = password.hashCode();
-        try {
-            DBConnection DB = new DBConnection();
-            ResultSet rs = DB.RetrieveFromTableName("client");
-            while (rs.next()) {
-                String UserName = rs.getString("username");
-                int HashPassword = rs.getInt("password");
-
-                if(UserName.contentEquals(username) && (HashPassword == hash) ){
-                    return true;
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
 
     public int getClientID(String username) throws SQLException{
         try{
@@ -55,17 +37,37 @@ public class DBclient extends DBConnection {
             if (rs.next()) {
                 return rs.getInt("clientid");
             }
-        }catch (Exception e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
         return -1;
     }
 
-
+    // getting all the Banks a client is a customer of
     public ResultSet ClientBanks(String client_name) throws SQLException{
         DBConnection DB = new DBConnection();
-        String sql = "select bankname from `bank` where bankid in (SELECT DISTINCT bankid from `bankclient`,`client` where bankclient.clientid = (SELECT clientid from client where client.username  = '"+client_name+"') )";
+        String sql = "select bankname from `bank` where bankid in (SELECT DISTINCT bankid from `bankclient`,`client` where bankclient.clientid in (SELECT clientid from client where client.username  = '"+client_name+"') )";
         return  DB.SelectStatement(sql);
+    }
+
+
+    // checking is user name and password is present
+    public Boolean IsAvailable(String username, String password) throws SQLException{
+        int hash = password.hashCode();
+        try {
+            DBConnection DB = new DBConnection();
+            ResultSet rs = DB.SelectStatement("select username, password from `client` where username = '"+username+"' and password = '"+hash+"'");
+            if (rs.next()) {
+                String UserName = rs.getString("username");
+                int HashPassword = rs.getInt("password");
+                if(UserName.contentEquals(username) && (HashPassword == hash) ){
+                    return true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
 
