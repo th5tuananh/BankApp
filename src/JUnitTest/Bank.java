@@ -23,6 +23,7 @@ public class Bank {
             DB.DeleteTableData("bank");
             DB.DeleteTableData("bankclient");
             DB.AddNewBank("Royal Bank");
+            DB.AddNewBank("Republic Bank");
         }catch(SQLException e){
             e.printStackTrace();
         }

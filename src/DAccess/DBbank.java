@@ -21,12 +21,24 @@ public class DBbank extends DBConnection {
                 String sql = "INSERT INTO `bank`(`bankname`) VALUES ('" + BankName + "')";
                 Statement stmt = conn.createStatement();
                 stmt.execute(sql);
-            } else {
-                // a null name was entered
             }
+
         } catch (SQLException se) {
             se.printStackTrace();
         }
+    }
+
+    public int getBankID(String bank_name){
+        try {
+            DBConnection DB = new DBConnection();
+            ResultSet rs = DB.SelectStatement("select bankid from bank where bankname = '"+bank_name+"'");
+            if(rs.next()) {
+                return rs.getInt("bankid");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return -1;
     }
 
 

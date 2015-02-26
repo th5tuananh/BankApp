@@ -23,8 +23,6 @@ public class DBclient extends DBConnection {
                 String sql = "INSERT INTO `client`(`firstname`, `lastname`, `username`,`password`) VALUES ('" + firstname + "','" + lastname +"','" + UserName + "','" + Password.hashCode() + "')";
                 Statement stmt = conn.createStatement();
                 stmt.execute(sql);
-            }else{
-                // a null name was entered
             }
         }catch (SQLException se){
             se.printStackTrace();
@@ -48,6 +46,19 @@ public class DBclient extends DBConnection {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public int getClientID(String username) throws SQLException{
+        try{
+            DBConnection DB = new DBConnection();
+            ResultSet rs = DB.SelectStatement("select clientid from client where username = '"+username+"'");
+            if (rs.next()) {
+                return rs.getInt("clientid");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return -1;
     }
 
 
