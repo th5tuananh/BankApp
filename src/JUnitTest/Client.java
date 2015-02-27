@@ -1,6 +1,7 @@
 package JUnitTest;
 
 import DAccess.*;
+import junit.framework.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -28,6 +29,7 @@ public class Client {
             DBc.AddNewClient("Mitra","Kalloo","mkalloo","password123");
             DBc.AddNewClient("Will","Smith","WillSmith","WillS");
             DBc.AddNewClient("Harry","Potter","HP","HPot");
+            DBc.AddNewClient("Amit","Maraj","AM","password");
 
         }catch(SQLException e){
             e.printStackTrace();
@@ -41,6 +43,7 @@ public class Client {
         assertTrue(DBc.IsAvailable("mkalloo","password123"));
         assertFalse(DBc.IsAvailable("WillSmith","Wills"));
         assertTrue(DBc.IsAvailable("HP","HPot"));
+        assertTrue(DBc.IsAvailable("AM", "password"));
     }
 
     @Test
@@ -48,11 +51,30 @@ public class Client {
         int clientid = DBc.getClientID("mkalloo");
         int bankid = DBb.getBankID("Royal Bank");
         DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
+        clientid = DBc.getClientID("AM");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
+        bankid = DBb.getBankID("Republic Bank");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
 
         ResultSet rs = DBc.ClientBanks("mkalloo");
         while(rs.next()) {
             assertEquals("Royal Bank", rs.getString("bankname"));
+
         }
+
+        rs = DBc.ClientBanks("AM");
+        if (rs.next()){
+            assertEquals("Royal Bank", rs.getString("bankname"));
+        }
+        if (rs.next()){
+            assertEquals("Republic Bank", rs.getString("bankname"));
+        }
+        if (rs.next()){
+            assertEquals("Republic Bank", rs.getString("bankname"));
+        }
+
+
     }
 
 }

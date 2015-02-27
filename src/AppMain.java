@@ -16,7 +16,7 @@ public class AppMain {
         try {
             ResultSet rs;
 
-            String name = "mkalloo";
+            String name = "AM";
             System.out.println("\n\n" + name +" banks");
             rs = DBc.ClientBanks(name);
             while(rs.next()){

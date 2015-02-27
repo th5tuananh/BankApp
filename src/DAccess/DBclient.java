@@ -44,9 +44,9 @@ public class DBclient extends DBConnection {
     }
 
     // getting all the Banks a client is a customer of
-    public ResultSet ClientBanks(String client_name) throws SQLException{
+    public ResultSet ClientBanks(String client_Username) throws SQLException{
         DBConnection DB = new DBConnection();
-        String sql = "select bankname from `bank` where bankid in (SELECT DISTINCT bankid from `bankclient`,`client` where bankclient.clientid in (SELECT clientid from client where client.username  = '"+client_name+"') )";
+        String sql = "select bankname from `bank` where bankid in (SELECT DISTINCT bankid from `bankclient`,`client` where bankclient.clientid in (SELECT clientid from client where client.username  = '"+client_Username+"') )";
         return  DB.SelectStatement(sql);
     }
 
