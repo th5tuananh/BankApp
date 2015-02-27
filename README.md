@@ -1,7 +1,7 @@
 # BankApp
 
 Packages:
-    DAccess: -
+    DAccess:
       DBConnection :DBConnection()  // CONSTRUCTOR
                     Connection getConn()  // RETURNS THE CONNECTION
                     void UpdateOrInsert(String sql) throws SQLException
