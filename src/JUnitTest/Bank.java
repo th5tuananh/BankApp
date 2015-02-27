@@ -1,14 +1,10 @@
 package JUnitTest;
 
 import DAccess.*;
-
-import org.junit.*;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import static junit.framework.Assert.assertNotSame;
-import static junit.framework.TestCase.assertEquals;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 
 public class Bank {

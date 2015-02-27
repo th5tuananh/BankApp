@@ -1,16 +1,11 @@
 package JUnitTest;
 
 import DAccess.*;
-import junit.framework.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.*;
 
 public class Client {
 
