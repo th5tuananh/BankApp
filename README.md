@@ -1,4 +1,5 @@
 # BankApp
+Used to help clients manage their bank accounts from multiple banks
 
 Packages:
     DAccess:
