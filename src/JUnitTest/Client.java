@@ -51,6 +51,8 @@ public class Client {
         bankid = DBb.getBankID("Republic Bank");
         DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
         DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
+        bankid = DBb.getBankID("Social Bank");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
 
         ResultSet rs = DBc.ClientBanks("mkalloo");
         while(rs.next()) {
@@ -66,7 +68,7 @@ public class Client {
             assertEquals("Republic Bank", rs.getString("bankname"));
         }
         if (rs.next()){
-            assertEquals("Republic Bank", rs.getString("bankname"));
+            assertEquals("Social Bank", rs.getString("bankname"));
         }
 
 
