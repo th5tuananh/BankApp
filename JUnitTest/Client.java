@@ -1,5 +1,3 @@
-package JUnitTest;
-
 import DAccess.*;
 import org.junit.*;
 

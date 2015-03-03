@@ -1,5 +1,3 @@
-package JUnitTest;
-
 import DAccess.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
