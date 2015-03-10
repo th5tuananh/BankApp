@@ -85,6 +85,32 @@ public class DBConnection {
         }
     }
 
+    public int getBankID(String bank_name) throws SQLException{
+        try {
+            DBConnection DB = new DBConnection();
+            ResultSet rs = DB.SelectStatement("select bankid from bank where bankname = '"+bank_name+"'");
+            if(rs.next()) {
+                return rs.getInt("bankid");
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public int getClientID(String username) throws SQLException{
+        try{
+            DBConnection DB = new DBConnection();
+            ResultSet rs = DB.SelectStatement("select clientid from client where username = '"+username+"'");
+            if (rs.next()) {
+                return rs.getInt("clientid");
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
 
 
     public Connection getConn() {

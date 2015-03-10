@@ -18,7 +18,7 @@ public class Bank {
             DB.DeleteTableData("bankclient");
             DB.AddNewBank("Royal Bank");
             DB.AddNewBank("Republic Bank");
-            DB.AddNewBank("Social Bank");
+            DB.AddNewBank("Scotia Bank");
         }catch(SQLException e){
             e.printStackTrace();
         }

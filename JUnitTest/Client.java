@@ -49,7 +49,7 @@ public class Client {
         bankid = DBb.getBankID("Republic Bank");
         DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
         DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
-        bankid = DBb.getBankID("Social Bank");
+        bankid = DBb.getBankID("Scotia Bank");
         DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
 
         ResultSet rs = DBc.ClientBanks("mkalloo");
@@ -59,15 +59,21 @@ public class Client {
         }
 
         rs = DBc.ClientBanks("AM");
+        int count = 0;
         if (rs.next()){
             assertEquals("Royal Bank", rs.getString("bankname"));
+            count++;
         }
         if (rs.next()){
             assertEquals("Republic Bank", rs.getString("bankname"));
+            count++;
         }
         if (rs.next()){
-            assertEquals("Social Bank", rs.getString("bankname"));
+            assertEquals("Scotia Bank", rs.getString("bankname"));
+            count++;
         }
+
+        assertEquals(3,count);
 
 
     }

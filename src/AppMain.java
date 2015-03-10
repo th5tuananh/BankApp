@@ -33,7 +33,14 @@ public class AppMain {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+
 
 
 }
