@@ -1,5 +1,5 @@
 package Accounts;
-
+import Exception.*;
 
 public abstract class Account {
 //    variables to be used
@@ -8,12 +8,13 @@ public abstract class Account {
     protected double balance;
 
 
-
+//constructor
     public Account() {
         number = numberGenerator;
         numberGenerator = numberGenerator + 10;
     }
 
+//methods
     public Account(int number , double balance){
         this.number = number;
         this.balance = balance;
@@ -23,9 +24,17 @@ public abstract class Account {
         balance = balance + amount;
     }
 
-    public void withdraw(double amount) {
+    public void withdraw(double amount) throws InsufficientFundsException{
         if( balance >= amount ) balance = balance - amount;
+        else throw new InsufficientFundsException();
+    }
 
+    public void transfer(double amount, Account accFrom, Account accTo) throws InsufficientFundsException{
+        if(amount <= accFrom.balance){
+            accFrom.withdraw(amount);
+            accTo.deposit(amount);
+        }
+        else throw new InsufficientFundsException();
     }
 
     public String toString() {
