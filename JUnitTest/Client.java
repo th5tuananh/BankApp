@@ -19,7 +19,7 @@ public class Client {
             // Adding clients
             DBc.DeleteTableData("bankclient");
             DBc.DeleteTableData("client");
-            DBc.AddNewClient("Mitra","Kalloo","mkalloo","password123");
+            DBc.AddNewClient("Mitra","Kalloo","MK","password");
             DBc.AddNewClient("Will","Smith","WillSmith","WillS");
             DBc.AddNewClient("Harry","Potter","HP","HPot");
             DBc.AddNewClient("Amit","Maraj","AM","password");
@@ -33,7 +33,7 @@ public class Client {
     // testing Logging is true/false
     @Test
     public void testBankName() throws SQLException {
-        assertTrue(DBc.IsAvailable("mkalloo","password123"));
+        assertTrue(DBc.IsAvailable("MK","password"));
         assertFalse(DBc.IsAvailable("WillSmith","Wills"));
         assertTrue(DBc.IsAvailable("HP","HPot"));
         assertTrue(DBc.IsAvailable("AM", "password"));
@@ -41,7 +41,7 @@ public class Client {
 
     @Test
     public void clientBanks() throws SQLException{
-        int clientid = DBc.getClientID("mkalloo");
+        int clientid = DBc.getClientID("MK");
         int bankid = DBb.getBankID("Royal Bank");
         DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
         clientid = DBc.getClientID("AM");
@@ -52,7 +52,7 @@ public class Client {
         bankid = DBb.getBankID("Scotia Bank");
         DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
 
-        ResultSet rs = DBc.ClientBanks("mkalloo");
+        ResultSet rs = DBc.ClientBanks("MK");
         while(rs.next()) {
             assertEquals("Royal Bank", rs.getString("bankname"));
 
