@@ -16,9 +16,7 @@ public class Client {
         DBc = new DBclient();
         DBb = new DBbank();
         try{
-            // Adding clients
-            DBc.DeleteTableData("bankclient");
-            DBc.DeleteTableData("client");
+            // Adding client
             DBc.AddNewClient("Mitra","Kalloo","MK","password");
             DBc.AddNewClient("Will","Smith","WillSmith","WillS");
             DBc.AddNewClient("Harry","Potter","HP","HPot");
@@ -43,14 +41,14 @@ public class Client {
     public void clientBanks() throws SQLException{
         int clientid = DBc.getClientID("MK");
         int bankid = DBb.getBankID("Royal Bank");
-        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (" +1000+ ", '"+bankid+"','"+clientid+"');");
         clientid = DBc.getClientID("AM");
-        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (" +1001+ ", '"+bankid+"','"+clientid+"');");
         bankid = DBb.getBankID("Republic Bank");
-        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
-        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (" +1002+ ", '"+bankid+"','"+clientid+"');");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (" +1003+ ", '"+bankid+"','"+clientid+"');");
         bankid = DBb.getBankID("Scotia Bank");
-        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (NULL, '"+bankid+"','"+clientid+"');");
+        DBc.UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (" +1004+ ", '"+bankid+"','"+clientid+"');");
 
         ResultSet rs = DBc.ClientBanks("MK");
         while(rs.next()) {

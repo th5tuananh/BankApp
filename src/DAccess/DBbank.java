@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class DBbank extends DBConnection {
 
     private Connection conn;
-
+    DBConnection DB = new DBConnection();
     public DBbank() {
         super();
         conn = getConn();
@@ -30,8 +30,7 @@ public class DBbank extends DBConnection {
 
     public int getBankID(String bank_name) throws SQLException{
         try {
-            DBConnection DB = new DBConnection();
-            ResultSet rs = DB.SelectStatement("select bankid from bank where bankname = '"+bank_name+"'");
+            ResultSet rs = DB.SelectStatement("select * from bank where bankname = '"+bank_name+"'");
             if(rs.next()) {
                 return rs.getInt("bankid");
             }

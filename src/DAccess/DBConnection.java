@@ -34,6 +34,10 @@ public class DBConnection {
         }
     }
 
+    public void closeDB() throws SQLException {
+        conn.close();
+    }
+
 
     //    can be used to run a custom sql update or insert statement
     public void UpdateOrInsert(String sql) throws SQLException {

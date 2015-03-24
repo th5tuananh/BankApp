@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 public class DBclient extends DBConnection {
 
     private Connection conn;
+    DBConnection DB = new DBConnection();
 
     public DBclient(){
         super();
@@ -32,7 +33,6 @@ public class DBclient extends DBConnection {
 
     public int getClientID(String username) throws SQLException{
         try{
-            DBConnection DB = new DBConnection();
             ResultSet rs = DB.SelectStatement("select clientid from client where username = '"+username+"'");
             if (rs.next()) {
                 return rs.getInt("clientid");
@@ -45,8 +45,7 @@ public class DBclient extends DBConnection {
 
     // getting all the Banks a client is a customer of
     public ResultSet ClientBanks(String client_Username) throws SQLException{
-        DBConnection DB = new DBConnection();
-        String sql = "select bankname from `bank` where bankid in (SELECT DISTINCT bankid from `bankclient`,`client` where bankclient.clientid in (SELECT clientid from client where client.username  = '"+client_Username+"') )";
+        String sql = "select * from `bank` where bankid in (SELECT DISTINCT bankid from `bankclient`,`client` where bankclient.clientid in (SELECT clientid from client where client.username  = '"+client_Username+"') )";
         return  DB.SelectStatement(sql);
     }
 
@@ -55,7 +54,6 @@ public class DBclient extends DBConnection {
     public Boolean IsAvailable(String username, String password) throws SQLException{
         int hash = password.hashCode();
         try {
-            DBConnection DB = new DBConnection();
             ResultSet rs = DB.SelectStatement("select username, password from `client` where username = '"+username+"' and password = '"+hash+"'");
             if (rs.next()) {
                 String UserName = rs.getString("username");
