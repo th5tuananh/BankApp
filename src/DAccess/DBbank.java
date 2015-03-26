@@ -11,7 +11,12 @@ public class DBbank extends DBConnection {
     DBConnection DB = new DBConnection();
     public DBbank() {
         super();
-        conn = getConn();
+        if (getConn() != null){
+            conn = getConn();
+        }
+        else{
+            return;
+        }
     }
 
 

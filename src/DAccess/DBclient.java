@@ -13,7 +13,12 @@ public class DBclient extends DBConnection {
 
     public DBclient(){
         super();
-        conn = getConn();
+        if (getConn() != null){
+            conn = getConn();
+        }
+        else{
+            return;
+        }
     }
 
 

@@ -18,7 +18,7 @@ public class DBConnection {
 
 
     private Connection conn;
-    //private boolean connected;
+    private boolean connected;
 
 
     public DBConnection(){
@@ -26,11 +26,10 @@ public class DBConnection {
         try{
             Class.forName(JDBC_DRIVER);
             conn = DriverManager.getConnection(DB_URL, username, password);
-            //if (conn != null) this.connected = true;
+            if (conn != null) this.connected = true;
         }catch (Exception e){
             e.printStackTrace();
-            System.out.println(e.getMessage());
-            //connected = false;
+            connected = false;
         }
     }
 
@@ -66,6 +65,28 @@ public class DBConnection {
     public ResultSet RetrieveFromTableName(String tablename) throws SQLException {
         try{
             String sql = "SELECT * FROM " + tablename;
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            return rs;
+        }catch(SQLException se){
+            se.printStackTrace();
+        }
+        return null;
+    }
+
+    public void InsertIntoTransactionLog(int bcid, String description, double oldBalance, double newBalance) throws SQLException{
+        try{
+            String sql = "INSERT INTO `log` (`account`,`description`,`old_balance`,`new_balance`) VALUES ("+bcid+",'"+description+"',"+oldBalance+","+newBalance+")";
+            Statement stmt = conn.createStatement();
+            stmt.execute(sql);
+        }catch (SQLException se){
+            se.printStackTrace();
+        }
+    }
+
+    public ResultSet getAccountTransactionLog(int accountBCID) throws SQLException{
+        try{
+            String sql = "SELECT * FROM `log` where account = "+accountBCID;
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
             return rs;
@@ -118,7 +139,13 @@ public class DBConnection {
 
 
     public Connection getConn() {
-        return conn;
+        if (connected == true){
+            return conn;
+        }else{
+            System.out.println("NO CONNECTION TO DATABASE!!!!!!!!!!!!!!!!!");
+            return null;
+        }
+
     }
 
 }

@@ -22,7 +22,7 @@
       <index name="bankid" unique="false" columns="bankid"/>
     </table>
     <table name="bankclient" schema="" catalog="softengbankapp" type="TABLE">
-      <column name="bcid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="bcid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="bankid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="clientid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="bcid"/>
@@ -34,6 +34,14 @@
       <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="password" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="clientid"/>
+    </table>
+    <table name="log" schema="" catalog="softengbankapp" type="TABLE">
+      <column name="logid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="account" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="YWNjb3VudCBiY2lk"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="balance" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="logid"/>
     </table>
   </data-source>
 </component>

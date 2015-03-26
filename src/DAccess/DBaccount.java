@@ -1,7 +1,4 @@
 package DAccess;
-import Exception.LessThanZero;
-
-
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,7 +12,13 @@ public class DBaccount extends DBConnection {
 
     public DBaccount(){
         super();
-        conn = getConn();
+        if (getConn() != null){
+            conn = getConn();
+        }
+        else{
+            return;
+        }
+
     }
 
     public void addAccount(int bcid, String accounttype, double balance) throws SQLException {
@@ -34,17 +37,41 @@ public class DBaccount extends DBConnection {
         return  DB.SelectStatement(sql);
     }
 
-    public double getBalance(int bcid) throws SQLException {
-        String sql= "select * from `account` where bcid = " + bcid;
-        ResultSet rs = DB.SelectStatement(sql);
-        double balance = -1;
-        if (rs.next()){
-            balance = rs.getInt("balance");
-        }
-        return balance;
+    // transferring money from account one to account two
+    // return 0 for fail and 1 for a successful transfer
+    public int transfer(int accountOneBCID, int accountTwoBCID, double amountToTransfer) throws SQLException{
+            double accountOneBalance = getBalance(accountOneBCID);
+            double accountTwoBalance = getBalance(accountTwoBCID);
+                if (amountToTransfer <= accountOneBalance) {
+                    // deducting accountOne balance
+                    setBalance(accountOneBCID, accountOneBalance - amountToTransfer);
+                    DB.InsertIntoTransactionLog(accountOneBCID, "transfer $" + amountToTransfer + " to account " + accountTwoBCID,accountOneBalance, accountOneBalance - amountToTransfer);
+                    // increasing accountTwo balance
+                    setBalance(accountTwoBCID, accountTwoBalance + amountToTransfer);
+                    DB.InsertIntoTransactionLog(accountTwoBCID, "received $" + amountToTransfer+ " from account " + accountOneBCID,accountTwoBalance,accountTwoBalance + amountToTransfer);
+                }else{
+                    return 0;
+                }
+        return 1;
     }
 
-    public void setBaalance(int bcid, double balance){
+
+    public double getBalance(int bcid){
+        try {
+            String sql = "select * from `account` where bcid = " + bcid;
+            ResultSet rs = DB.SelectStatement(sql);
+            double balance = -1;
+            if (rs.next()) {
+                balance = rs.getInt("balance");
+            }
+            return balance;
+        }catch (SQLException se){
+
+        }
+        return 0;
+    }
+
+    public void setBalance(int bcid, double balance){
         try {
             String sql = "UPDATE `account` SET balance = " + balance + " WHERE bcid = "+ bcid;
             Statement stmt = conn.createStatement();

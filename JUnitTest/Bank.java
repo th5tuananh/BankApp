@@ -16,8 +16,10 @@ public class Bank {
             // Adding Bank
             DB.DeleteTableData("bank");
             DB.DeleteTableData("client");
-            DB.DeleteTableData("bankclient");
             DB.DeleteTableData("account");
+            DB.DeleteTableData("bankclient");
+            DB.DeleteTableData("log");
+
 
             DB.AddNewBank("Royal Bank");
             DB.AddNewBank("Republic Bank");
