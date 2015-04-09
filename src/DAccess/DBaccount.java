@@ -37,6 +37,7 @@ public class DBaccount extends DBConnection {
         return  DB.SelectStatement(sql);
     }
 
+
     // transferring money from account one to account two
     // return 0 for fail and 1 for a successful transfer
     public int transfer(int accountOneBCID, int accountTwoBCID, double amountToTransfer) throws SQLException{
@@ -56,19 +57,19 @@ public class DBaccount extends DBConnection {
     }
 
 
-    public double getBalance(int bcid){
+
+    public double getBalance(int bcid)throws SQLException{
         try {
             String sql = "select * from `account` where bcid = " + bcid;
             ResultSet rs = DB.SelectStatement(sql);
             double balance = -1;
             if (rs.next()) {
-                balance = rs.getInt("balance");
+                return balance = rs.getInt("balance");
             }
-            return balance;
         }catch (SQLException se){
-
+            se.printStackTrace();
         }
-        return 0;
+        return -1;
     }
 
     public void setBalance(int bcid, double balance){

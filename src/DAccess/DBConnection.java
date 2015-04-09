@@ -96,6 +96,18 @@ public class DBConnection {
         return null;
     }
 
+    public ResultSet getClientBankAccountsTransactionLog(String client_username,String bankname) throws SQLException{
+        try{
+            String sql = "Select * from `log` where bcid in (select bcid from `bankclient` where bankid = '" +getBankID(bankname)+"' and clientid = '"+getClientID(client_username)+"')";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            return rs;
+        }catch(SQLException se){
+            se.printStackTrace();
+        }
+        return null;
+    }
+
 
 
 
