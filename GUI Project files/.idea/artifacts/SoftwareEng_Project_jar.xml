@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SoftwareEng-Project:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SoftwareEng_Project_jar</output-path>
+    <root id="archive" name="SoftwareEng-Project.jar">
+      <element id="module-output" name="SoftwareEng-Project" />
+      <element id="library" level="module" name="BankApp.jar" module-name="SoftwareEng-Project" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/controlsfx-8.20.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Google Drive/WORKSPACE/GitHub/BankApp/out/artifacts/BankApp_jar/BankApp.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
