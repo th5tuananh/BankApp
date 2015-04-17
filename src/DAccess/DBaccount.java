@@ -1,5 +1,7 @@
 package DAccess;
 
+import Exception.TooLargeWithdrawalException;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,17 +10,13 @@ import java.sql.Statement;
 public class DBaccount extends DBConnection {
 
     private Connection conn;
-    DBConnection DB = new DBConnection();
+    private DBConnection DB = new DBConnection();
 
     public DBaccount(){
         super();
         if (getConn() != null){
             conn = getConn();
         }
-        else{
-            return;
-        }
-
     }
 
     public void addAccount(int bcid, String accounttype, double balance) throws SQLException {
@@ -32,15 +30,34 @@ public class DBaccount extends DBConnection {
             }
         }
 
+    public void addAccount(int bcid, String Username, String Bankname, String accounttype, double balance) throws SQLException {
+        try {
+            int check = CreateBCID(bcid,Username,Bankname);
+            if (check == 1) {
+                String sql = "INSERT INTO `account`(`accountid`,`bcid`,`accounttype`,`balance`) VALUES (NULL," + bcid + ",'" + accounttype + "'," + balance + ")";
+                Statement stmt = conn.createStatement();
+                stmt.execute(sql);
+            }
+            else System.out.println("account not added");
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+    }
+
     public ResultSet clientBankAccounts(String clinet_username,String bankname) throws SQLException{
         String sql = "Select * from `account` where bcid in (select bcid from `bankclient` where bankid = '" +getBankID(bankname)+"' and clientid = '"+getClientID(clinet_username)+"')";
+        return  DB.SelectStatement(sql);
+    }
+
+    public ResultSet AllClientAccounts(String clinet_username) throws SQLException {
+        String sql = "Select * from `account` where bcid in (select bcid from `bankclient` where clientid = '"+getClientID(clinet_username)+"')";
         return  DB.SelectStatement(sql);
     }
 
 
     // transferring money from account one to account two
     // return 0 for fail and 1 for a successful transfer
-    public int transfer(int accountOneBCID, int accountTwoBCID, double amountToTransfer) throws SQLException{
+    public int transfer(int accountOneBCID, int accountTwoBCID, double amountToTransfer) throws SQLException {
             double accountOneBalance = getBalance(accountOneBCID);
             double accountTwoBalance = getBalance(accountTwoBCID);
                 if (amountToTransfer <= accountOneBalance) {
@@ -58,7 +75,7 @@ public class DBaccount extends DBConnection {
 
 
 
-    public double getBalance(int bcid)throws SQLException{
+    private double getBalance(int bcid)throws SQLException{
         try {
             String sql = "select * from `account` where bcid = " + bcid;
             ResultSet rs = DB.SelectStatement(sql);
@@ -72,7 +89,7 @@ public class DBaccount extends DBConnection {
         return -1;
     }
 
-    public void setBalance(int bcid, double balance){
+    private void setBalance(int bcid, double balance){
         try {
             String sql = "UPDATE `account` SET balance = " + balance + " WHERE bcid = "+ bcid;
             Statement stmt = conn.createStatement();

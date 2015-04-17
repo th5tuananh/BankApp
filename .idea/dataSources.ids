@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - softengbankapp@www.db4free.net" uuid="17ce413c-2618-4ec7-934e-0dade17aec4e">
+  <data-source name="DB4free - BankApp" uuid="17ce413c-2618-4ec7-934e-0dade17aec4e">
     <database-info product="MySQL" version="5.6.23" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -40,6 +40,51 @@
       <column name="account" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="YWNjb3VudCBiY2lk"/>
       <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="balance" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="logid"/>
+    </table>
+  </data-source>
+  <data-source name="BankApp - Local" uuid="ce6de4be-aa65-47ff-8faf-97d07ff2abe3">
+    <database-info product="MySQL" version="5.6.21" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="softengbankapp"/>
+    <table name="account" schema="" catalog="softengbankapp" type="TABLE">
+      <column name="accountid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="bcid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="accounttype" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="balance" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <primary-key name="PRIMARY" columns="accountid"/>
+      <index name="accountid" unique="false" columns="accountid"/>
+    </table>
+    <table name="bank" schema="" catalog="softengbankapp" type="TABLE">
+      <column name="bankid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="bankname" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="bankid"/>
+      <index name="bankid" unique="false" columns="bankid"/>
+    </table>
+    <table name="bankclient" schema="" catalog="softengbankapp" type="TABLE">
+      <column name="bcid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="bankid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="clientid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="bcid"/>
+    </table>
+    <table name="client" schema="" catalog="softengbankapp" type="TABLE">
+      <column name="clientid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="firstname" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lastname" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="clientid"/>
+    </table>
+    <table name="log" schema="" catalog="softengbankapp" type="TABLE">
+      <column name="logid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="account" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="YWNjb3VudCBiY2lk"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="old_balance" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="new_balance" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
       <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
       <primary-key name="PRIMARY" columns="logid"/>
     </table>

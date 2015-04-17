@@ -10,11 +10,17 @@ import java.sql.Statement;
 
 public class DBConnection {
 
+//    Online Login
+//    private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+//    private final String DB_URL = "jdbc:mysql://www.db4free.net/softengbankapp";
+//    private final String username = "softengbankapp";
+//    private final String password = "Password123";
+
+//  Local Login
     private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://www.db4free.net/softengbankapp";
+    private final String DB_URL = "jdbc:mysql://localhost/softengbankapp";
     private final String username = "softengbankapp";
     private final String password = "Password123";
-
 
 
     private Connection conn;
@@ -52,8 +58,7 @@ public class DBConnection {
     public ResultSet SelectStatement(String sql) throws SQLException{
         try{
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
-            return rs;
+            return stmt.executeQuery(sql);
         }catch(SQLException se){
             se.printStackTrace();
         }
@@ -125,7 +130,7 @@ public class DBConnection {
     public int getBankID(String bank_name) throws SQLException{
         try {
             DBConnection DB = new DBConnection();
-            ResultSet rs = DB.SelectStatement("select bankid from bank where bankname = '"+bank_name+"'");
+            ResultSet rs = DB.SelectStatement("select bankid from bank where bankname = '" + bank_name + "'");
             if(rs.next()) {
                 return rs.getInt("bankid");
             }
@@ -138,7 +143,7 @@ public class DBConnection {
     public int getClientID(String username) throws SQLException{
         try{
             DBConnection DB = new DBConnection();
-            ResultSet rs = DB.SelectStatement("select clientid from client where username = '"+username+"'");
+            ResultSet rs = DB.SelectStatement("select clientid from client where username = '" + username + "'");
             if (rs.next()) {
                 return rs.getInt("clientid");
             }
@@ -149,9 +154,23 @@ public class DBConnection {
     }
 
 
+    public int CreateBCID(int BCID , String Username, String Bankname) {
+        try{
+            int clientid = getClientID(Username);
+            int bankid = getBankID(Bankname);
+            if (clientid != -1 && bankid != -1) {
+                UpdateOrInsert("INSERT INTO `softengbankapp`.`bankclient` (`bcid`, `bankid`, `clientid`) VALUES (" + BCID + ", '" + bankid + "','" + clientid + "');");
+            }
+            else return 0;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return 1;
+    }
+
 
     public Connection getConn() {
-        if (connected == true){
+        if (connected){
             return conn;
         }else{
             System.out.println("NO CONNECTION TO DATABASE!!!!!!!!!!!!!!!!!");

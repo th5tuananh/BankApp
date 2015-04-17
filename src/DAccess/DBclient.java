@@ -16,9 +16,6 @@ public class DBclient extends DBConnection {
         if (getConn() != null){
             conn = getConn();
         }
-        else{
-            return;
-        }
     }
 
 

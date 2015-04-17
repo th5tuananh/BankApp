@@ -21,7 +21,7 @@ public class AppMain {
         System.out.println("\n\nPlease enter a choice : ");
         int choice  = scanner.nextInt();
 
-        while (choice != 5) {
+        while (choice != 99) {
 
             switch (choice) {
 //  ==============>>  choices  <<===============
@@ -67,9 +67,56 @@ public class AppMain {
                     }
                     break;
                 case 4:
+                    System.out.println("All Clients in System \n");
+                    try {
+                        ResultSet rs = DBb.RetrieveFromTableName("client");
+                        while (rs.next()) {
+                            fname = rs.getString("firstname");
+                            lname = rs.getString("lastname");
+                            username = rs.getString("username");
+                            System.out.println("Name : "+ fname + " "+ lname + " | Username : " + username);
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                     break;
 
                 case 5:
+                    System.out.println("Add New Account in System \n");
+
+                    System.out.println("please enter and account number \n");
+                    int bcid = scanner.nextInt();
+                    System.out.println("please enter username");
+                    username = scanner.next();
+                    System.out.println("please enter Bank Name");
+                    String bankname = scanner.next();
+                    System.out.println("please enter account type");
+                    String accounttype = scanner.next();
+                    System.out.println("please enter balancer \n");
+                    double balance = scanner.nextInt();
+
+                    try {
+                        DBa.addAccount(bcid,username,bankname,accounttype,balance);
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+
+                case 6:
+                    System.out.println("All Clients in System \n");
+                    System.out.println("please enter client username");
+                    username = scanner.next();
+                    try {
+                        ResultSet rs = DBa.AllClientAccounts(username);
+                        while (rs.next()) {
+                            bcid = rs.getInt("bcid");
+                            accounttype = rs.getString("accounttype");
+                            balance = rs.getDouble("balance");
+                            System.out.println("account # : "+ bcid + " | "+ accounttype + " | balance : $" + balance);
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                     break;
 
 
@@ -81,7 +128,7 @@ public class AppMain {
 
             // pause for 2 seconds before exit
             try {
-                Thread.sleep(5000);
+                Thread.sleep(2500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -108,7 +155,9 @@ public class AppMain {
                            "2) add client \n" +
                            "3) view banks\n" +
                            "4) view clients\n" +
-                           "5) to exit \n");
+                           "5) add account\n" +
+                           "6) view all client accounts\n" +
+                           "99) to exit \n");
     }
 
 

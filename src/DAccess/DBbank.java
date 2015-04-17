@@ -14,9 +14,6 @@ public class DBbank extends DBConnection {
         if (getConn() != null){
             conn = getConn();
         }
-        else{
-            return;
-        }
     }
 
 

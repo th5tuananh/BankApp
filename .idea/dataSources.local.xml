@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - softengbankapp@www.db4free.net" uuid="17ce413c-2618-4ec7-934e-0dade17aec4e">
+    <data-source name="DB4free - BankApp" uuid="17ce413c-2618-4ec7-934e-0dade17aec4e">
+      <secret-storage>master_key</secret-storage>
+      <user-name>softengbankapp</user-name>
+      <schema-pattern>softengbankapp.*</schema-pattern>
+      <default-schemas>softengbankapp.*</default-schemas>
+    </data-source>
+    <data-source name="BankApp - Local" uuid="ce6de4be-aa65-47ff-8faf-97d07ff2abe3">
       <secret-storage>master_key</secret-storage>
       <user-name>softengbankapp</user-name>
       <schema-pattern>softengbankapp.*</schema-pattern>

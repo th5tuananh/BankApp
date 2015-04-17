@@ -40,7 +40,7 @@ public class Account {
     @Test
     public void testTransfer() throws SQLException{
        int chk=  DBA.transfer(1000,1001,574);
-        DBA.transfer(1002,1003,1000);
+                DBA.transfer(1002,1003,1000);
 
         ResultSet rs =  DBA.clientBankAccounts("MK","Royal Bank");
         if (rs.next()) {

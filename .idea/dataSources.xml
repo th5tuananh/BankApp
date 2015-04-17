@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2224230141">
-    <data-source source="LOCAL" name="MySQL - softengbankapp@www.db4free.net" uuid="17ce413c-2618-4ec7-934e-0dade17aec4e">
+  <component name="DataSourceManagerImpl" format="xml" hash="126681800">
+    <data-source source="LOCAL" name="DB4free - BankApp" uuid="17ce413c-2618-4ec7-934e-0dade17aec4e">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -16,6 +16,24 @@
       <libraries>
         <library>
           <url>file://$PROJECT_DIR$/Java Lib/mysql-connector-java-5.1.34-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="BankApp - Local" uuid="ce6de4be-aa65-47ff-8faf-97d07ff2abe3">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost/softengbankapp</jdbc-url>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+      <libraries>
+        <library>
+          <url>file://C:/PROGRAMMING/Java Lib/mysql-connector-java-5.1.34-bin.jar</url>
         </library>
       </libraries>
     </data-source>
