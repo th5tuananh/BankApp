@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="BankApp:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f291ae03-7aad-4bec-b743-18ab74a0cdf9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Mitra.xml" />
-      <change type="DELETED" beforePath="C:\Users\Mitra\Google Drive\WORKSPACE\GitHub\BankApp\BankApp.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mitra\Google Drive\WORKSPACE\GitHub\BankApp\run.bat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JUnitTest/Account.java" afterPath="$PROJECT_DIR$/JUnitTest/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppMain.java" afterPath="$PROJECT_DIR$/src/AppMain.java" />
+      <change type="DELETED" beforePath="C:\Users\Mitra\Google Drive\WORKSPACE\GitHub\BankApp\GUI Project files\.settings\org.eclipse.jdt.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Mitra\Google Drive\WORKSPACE\GitHub\BankApp\GUI Project files\out\artifacts\SoftwareEng_Project_jar\SoftwareEng-Project.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Mitra\Google Drive\WORKSPACE\GitHub\BankApp\Library Project for App\.idea\libraries\BankApp.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Mitra\Google Drive\WORKSPACE\GitHub\BankApp\local.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Mitra\Google Drive\WORKSPACE\GitHub\BankApp\online.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI Project files/bin/BankScreen.class" afterPath="$PROJECT_DIR$/../GUI Project files/bin/BankScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI Project files/bin/LoginScreen.class" afterPath="$PROJECT_DIR$/../GUI Project files/bin/LoginScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI Project files/bin/TransactionLog.class" afterPath="$PROJECT_DIR$/../GUI Project files/bin/TransactionLog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI Project files/bin/Transfer.class" afterPath="$PROJECT_DIR$/../GUI Project files/bin/Transfer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI Project files/.idea/libraries/BankApp.xml" afterPath="$PROJECT_DIR$/../GUI Project files/.idea/libraries/BankApp.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAccess/DBConnection.java" afterPath="$PROJECT_DIR$/src/DAccess/DBConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAccess/DBaccount.java" afterPath="$PROJECT_DIR$/src/DAccess/DBaccount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAccess/DBbank.java" afterPath="$PROJECT_DIR$/src/DAccess/DBbank.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAccess/DBclient.java" afterPath="$PROJECT_DIR$/src/DAccess/DBclient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Exception/TooLargeWithdrawalException.java" afterPath="$PROJECT_DIR$/src/Exception/TooLargeWithdrawalException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/softengbankapp.sql" afterPath="$PROJECT_DIR$/DataBase/softengbankapp.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI Project files/.idea/artifacts/SoftwareEng_Project_jar.xml" afterPath="$PROJECT_DIR$/../GUI Project files/.idea/artifacts/SoftwareEng_Project_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI Project files/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../GUI Project files/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI Project files/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../GUI Project files/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BankApp.iws" />
@@ -92,58 +99,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DAccess/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding>
-                <marker date="1429051238797" expanded="true" signature="2016:2030" placeholder="SELECT * FRO..missingValue..." />
-                <marker date="1429051238797" expanded="true" signature="2446:2583" placeholder="INSERT INTO ..." />
-                <marker date="1429051238797" expanded="true" signature="2878:2914" placeholder="SELECT * FRO..." />
-                <marker date="1429051238797" expanded="true" signature="3318:3475" placeholder="Select * fro..." />
-                <marker date="1429051238797" expanded="true" signature="3878:3891" placeholder="DELETE FROM ..." />
+                <marker date="1429308725194" expanded="true" signature="2016:2030" placeholder="SELECT * FRO..missingValue..." />
+                <marker date="1429308725194" expanded="true" signature="2446:2583" placeholder="INSERT INTO ..." />
+                <marker date="1429308725194" expanded="true" signature="2878:2914" placeholder="SELECT * FRO..." />
+                <marker date="1429308725194" expanded="true" signature="3318:3475" placeholder="Select * fro..." />
+                <marker date="1429308725194" expanded="true" signature="3878:3891" placeholder="DELETE FROM ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBaccount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAccess/DBaccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1429097541635" expanded="true" signature="572:696" placeholder="INSERT INTO ..." />
-                <marker date="1429097541635" expanded="true" signature="1166:1296" placeholder="INSERT INTO ..." />
-                <marker date="1429097541635" expanded="true" signature="3866:3926" placeholder="UPDATE `acco..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppMain.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.241015">
-              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="softengbankapp.account" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/34e87c5e/ce6de4be-aa65-47ff-8faf-97d07ff2abe3/softengbankapp..account">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -151,7 +118,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -174,9 +141,9 @@
         <option value="$PROJECT_DIR$/src/DAccess/DBbank.java" />
         <option value="$PROJECT_DIR$/src/DAccess/DBclient.java" />
         <option value="$PROJECT_DIR$/JUnitTest/Account.java" />
-        <option value="$PROJECT_DIR$/src/DAccess/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/DAccess/DBaccount.java" />
         <option value="$PROJECT_DIR$/src/AppMain.java" />
+        <option value="$PROJECT_DIR$/src/DAccess/DBConnection.java" />
       </list>
     </option>
   </component>
@@ -239,45 +206,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BankApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BankApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BankApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BankApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BankApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAccess" />
+              <option name="myItemId" value="Library Project for App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -292,7 +227,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,17 +239,17 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2413793" />
-    <property name="last_opened_file_path" value="C:/PROGRAMMING/Java Lib/mysql-connector-java-5.1.34-bin.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="findjar.last.used.dir" value="C:/PROGRAMMING/Java Lib" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/JUnitTest" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -636,9 +571,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Unknown" factoryName="Unknown">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -714,11 +646,14 @@
       <workItem from="1429049464439" duration="2300000" />
       <workItem from="1429056019444" duration="382000" />
       <workItem from="1429097702493" duration="659000" />
+      <workItem from="1429278959183" duration="69000" />
+      <workItem from="1429308409658" duration="534000" />
+      <workItem from="1429316947471" duration="651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56628000" />
+    <option name="totallyTimeSpent" value="57882000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -752,24 +687,24 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266129" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18839541" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.101002865" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18839541" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.101002865" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22421204" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39919356" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266129" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -796,6 +731,72 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/DAccess/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429308725194" expanded="true" signature="2016:2030" placeholder="SELECT * FRO..missingValue..." />
+            <marker date="1429308725194" expanded="true" signature="2446:2583" placeholder="INSERT INTO ..." />
+            <marker date="1429308725194" expanded="true" signature="2878:2914" placeholder="SELECT * FRO..." />
+            <marker date="1429308725194" expanded="true" signature="3318:3475" placeholder="Select * fro..." />
+            <marker date="1429308725194" expanded="true" signature="3878:3891" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAccess/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <marker date="1429308725194" expanded="true" signature="2016:2030" placeholder="SELECT * FRO..missingValue..." />
+            <marker date="1429308725194" expanded="true" signature="2446:2583" placeholder="INSERT INTO ..." />
+            <marker date="1429308725194" expanded="true" signature="2878:2914" placeholder="SELECT * FRO..." />
+            <marker date="1429308725194" expanded="true" signature="3318:3475" placeholder="Select * fro..." />
+            <marker date="1429308725194" expanded="true" signature="3878:3891" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAccess/DBaccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAccess/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <marker date="1429308725194" expanded="true" signature="2016:2030" placeholder="SELECT * FRO..missingValue..." />
+            <marker date="1429308725194" expanded="true" signature="2446:2583" placeholder="INSERT INTO ..." />
+            <marker date="1429308725194" expanded="true" signature="2878:2914" placeholder="SELECT * FRO..." />
+            <marker date="1429308725194" expanded="true" signature="3318:3475" placeholder="Select * fro..." />
+            <marker date="1429308725194" expanded="true" signature="3878:3891" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAccess/DBaccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAccess/DBbank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -957,18 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/17ce413c-2618-4ec7-934e-0dade17aec4e/softengbankapp..bank">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DATABASE/17ce413c-2618-4ec7-934e-0dade17aec4e">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -991,18 +980,6 @@
             <Category>Key columns</Category>
           </Categories>
           <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/17ce413c-2618-4ec7-934e-0dade17aec4e/softengbankapp..bankclient">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1041,18 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/17ce413c-2618-4ec7-934e-0dade17aec4e/softengbankapp..client">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DATABASE/17ce413c-2618-4ec7-934e-0dade17aec4e.schema:softengbankapp">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1077,18 +1042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/17ce413c-2618-4ec7-934e-0dade17aec4e/softengbankapp..log">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Exception/LessThanZero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1107,9 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1117,7 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07855626">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1149,18 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/17ce413c-2618-4ec7-934e-0dade17aec4e/softengbankapp..account">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ce6de4be-aa65-47ff-8faf-97d07ff2abe3/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1168,87 +1105,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/ce6de4be-aa65-47ff-8faf-97d07ff2abe3/softengbankapp..client">
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/src/AppMain.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/ce6de4be-aa65-47ff-8faf-97d07ff2abe3/softengbankapp..bankclient">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/ce6de4be-aa65-47ff-8faf-97d07ff2abe3/softengbankapp..bank">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/DAccess/DBaccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.023743017">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAccess/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
           <folding>
-            <marker date="1429051238797" expanded="true" signature="2016:2030" placeholder="SELECT * FRO..missingValue..." />
-            <marker date="1429051238797" expanded="true" signature="2446:2583" placeholder="INSERT INTO ..." />
-            <marker date="1429051238797" expanded="true" signature="2878:2914" placeholder="SELECT * FRO..." />
-            <marker date="1429051238797" expanded="true" signature="3318:3475" placeholder="Select * fro..." />
-            <marker date="1429051238797" expanded="true" signature="3878:3891" placeholder="DELETE FROM ..." />
+            <marker date="1429308725194" expanded="true" signature="2016:2030" placeholder="SELECT * FRO..missingValue..." />
+            <marker date="1429308725194" expanded="true" signature="2446:2583" placeholder="INSERT INTO ..." />
+            <marker date="1429308725194" expanded="true" signature="2878:2914" placeholder="SELECT * FRO..." />
+            <marker date="1429308725194" expanded="true" signature="3318:3475" placeholder="Select * fro..." />
+            <marker date="1429308725194" expanded="true" signature="3878:3891" placeholder="DELETE FROM ..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/34e87c5e/ce6de4be-aa65-47ff-8faf-97d07ff2abe3/softengbankapp..account">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAccess/DBaccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1429097541635" expanded="true" signature="572:696" placeholder="INSERT INTO ..." />
-            <marker date="1429097541635" expanded="true" signature="1166:1296" placeholder="INSERT INTO ..." />
-            <marker date="1429097541635" expanded="true" signature="3866:3926" placeholder="UPDATE `acco..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.241015">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1260,9 +1143,9 @@
           <artifact-editor>
             <show-content>
               <type id="artifact" />
-              <type id="jpa-descriptors" />
               <type id="library" />
               <type id="javaee-facet-resources" />
+              <type id="jpa-descriptors" />
             </show-content>
           </artifact-editor>
           <last-edited>BankApp:jar</last-edited>

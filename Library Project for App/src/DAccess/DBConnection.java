@@ -11,16 +11,16 @@ import java.sql.Statement;
 public class DBConnection {
 
 //    Online Login
-//    private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-//    private final String DB_URL = "jdbc:mysql://www.db4free.net/softengbankapp";
-//    private final String username = "softengbankapp";
-//    private final String password = "Password123";
-
-//  Local Login
     private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://localhost/softengbankapp";
+    private final String DB_URL = "jdbc:mysql://www.db4free.net/softengbankapp";
     private final String username = "softengbankapp";
     private final String password = "Password123";
+
+//  Local Login
+//    private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+//    private final String DB_URL = "jdbc:mysql://localhost/softengbankapp";
+//    private final String username = "softengbankapp";
+//    private final String password = "Password123";
 
 
     private Connection conn;

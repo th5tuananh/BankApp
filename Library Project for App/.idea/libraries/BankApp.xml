@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="BankApp">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/out/artifacts/BankApp_jar/BankApp.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

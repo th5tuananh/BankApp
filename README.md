@@ -1,19 +1,24 @@
+Course: COMP 3250- Software Engineering
+Lecturer: Dr. Andrew Borg
+Group: SCRUMptious
+Group Members: Mitra Kalloo, Amit Maraj, Krishel Mahadeo, Danah Sudama
+
+#############################################
+LOGIN 
+username : AM
+password : password
+	OR
+username : MK
+password : password
+
+# USING THE APPLICATION
+run GUI App.jar for the application
+run Admin Console.bat for a admin console
+
+#############################################
+
 # BankApp
 Used to help clients manage their bank accounts from multiple banks
 
-    Packages:
-     DAccess:
-            DBConnection.java :DBConnection()  // CONSTRUCTOR
-                               Connection getConn()  // RETURNS THE CONNECTION
-                               void UpdateOrInsert(String sql) throws SQLException
-                               ResultSet SelectStatement(String sql) throws SQLException
-                               ResultSet RetrieveFromTableName(String tablename) throws SQLException
-                               void DeleteTableData(String tablename) throws SQLException
-                    
-            DBbank.java       :void AddNewBank(String BankName) throws SQLException
-                               int getBankID(String bank_name) throws SQLException // RETURN -1 IF NOT FOUND
-      
-            DBclient.java     :void AddNewClient(String firstname, String lastname, String UserName, String Password) throws SQLException
-                               int getClientID(String username) throws SQLException // RETURN -1 IF NOT FOUND
-                               ResultSet ClientBanks(String client_Username) throws SQLException
-                               Boolean IsAvailable(String username, String password) throws SQLException
+
+This consists of two projects A GUI and a Library of functionality for the GUI to use. This helps in easy working with the group where the person working on the GUI did not have to worry about setting up a databases and importing the MySQL library to perform tasks.

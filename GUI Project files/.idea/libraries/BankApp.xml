@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="BankApp">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Google Drive/WORKSPACE/GitHub/BankApp/out/artifacts/BankApp_jar/BankApp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Library Project for App/out/artifacts/BankApp_jar/BankApp.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
